@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aadhar Card Form</title>
+    <style>
+        .form-item {
+            margin-bottom: 15px;
+        }
+
+        .form-item label {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aadhar Card Form</h1>
+    <form >
+        <div class="form-item">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-item">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="form-item">
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-item">
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+
+        <div class="form-item">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+
+        <div class="form-item">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-item">
+            <label for="pin">PIN Code:</label>
+            <input type="number" id="pin" name="pin" pattern="[0-9]{6}" required>
+        </div>
+
+        <div class="form-item">
+            <label for="id">ID Number:</label>
+            <input type="text" id="id" name="id" pattern="[0-9]{12}" required>
+        </div>
+
+        <div class="form-item">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+
+
+</html>

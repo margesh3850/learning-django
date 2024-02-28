@@ -1,0 +1,25 @@
+ 1. What is the use of CSS?
+ -  CSS stands for Cascading Style Sheets, which is a style sheet language used for describing
+    the look and formatting of a document written in HTML. 
+
+2. Where can inline CSS be used?
+-  Inline CSS is used within an element's opening tag as a special attribute called "style".
+
+3. What is the full form of HTML, CSS?
+- HTML(hypertext markuup language)
+  CSS (cascading style sheets)
+
+4. What is the difference between internal and external CSS?
+- internal css is applied in html file using <style> tags while external css is linked to the html file from an external .css file using <link>
+
+
+5. What is the difference between a webpage and a website? 
+-webpage is  a single page of information while a website contains multiple pages or sections of related content.
+
+
+
+
+       
+       
+       
+       

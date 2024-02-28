@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right bottom, #348aca, #7579ff);
+            color: #000000;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+         input {
+                background-color: black;
+                color: white;
+                border: 1.5px solid white;
+                border-radius: 5px;
+                padding: 5px;
+            } 
+    </style>
+</head>
+
+<body>
+    <div class="cointainer">
+        <h1>Registration Form</h1>
+        <table>
+            <tr>
+                <td><label>name</label></td>
+                <td> <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td> <input type="email" name="email" id="email" placeholder="Enter Your Email"></td>
+
+            </tr>
+            <tr>
+                <td><label>Phone number</label></td>
+                <td><input type="tel" name="p-no" id="p-no" placeholder="Enter your Phone Number"></td>
+            </tr>
+            <tr>
+                <td><label> Date of Birth</label></td>
+                <td><input type="date" name="dob" id="dob"></td>
+            </tr>
+            <tr>
+                <td><label> Password</label></td>
+                <td><input type="password" name="passwrod" id="password" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td><label>Confirm Password</label></td>
+                <td> <input type="password" name="c_password" id="c_password" placeholder="Confirm Password"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <center><button onclick="storeData()">Submit</button></center>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function storeData() {
+            let fname = document.getElementById('fullname')
+            let email = document.getElementById("email")
+            let tel = document.getElementById("p-no")
+            let dob = document.getElementById("dob")
+            let password = document.getElementById("password")
+            let c_password = document.getElementById("c_password")
+
+            let data = [fname, tel, email, dob, password, c_password]
+            let counter = 0
+            let final_data = []
+            data.map((d) => {
+                if (!d.value) {
+                    d.style.borderColor = " 1.5px solid red";
+                } else {
+                    d.style.borderColor = "1.5px solid gray"
+                    final_data[counter] = d.value;
+                    counter++;
+                }
+            })
+            if (password.value != c_password.value) {
+                c_password.style.border = "1.5px solid red"
+            } else {
+                c_password.style.border = "1.5px solid grey"
+                localStorage.setItem("data", final_data)
+            }
+            console.log(final_data)
+        }
+    </script>
+
+</body>
+
+</html>
